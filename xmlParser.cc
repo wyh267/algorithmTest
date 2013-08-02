@@ -1,3 +1,44 @@
+/*
+
+
+本题来自蓝港在线技术团队的idea，详情如下：
+XML-可扩展标记语言 ，用于标记电子文件使其具有结构性的标记语言，可以用来标记数据、定义数据类型，
+是一种允许用户对自己的标记语言进行定义的源语言，被广泛的运用于数据传输和存储。请编写一段程序，
+不使用语言之外的开源库，解析对应的XML文件，并把输出结果打印出来。
+
+举个例子如下，当给定下述XML文件时（注：不需要将输入输出格式话，只是举个例子）：
+<?xml version="1.0" ?>
+<Books>
+<Book>
+<Name = “The C++ Programming Language” Author=”Bjarne Stroustrup” />
+</Book>
+<Book>
+<Name = “Effective C++” Author = “Scott Meyers” />
+</Book>
+</Books>
+它应该输出：
+Books
+ Book 1
+     Name:The C++ Programming Language
+     Author:Bjarne Stroustrup
+ Book 2
+     Name:Effective C++
+     Author:Scott Meyers
+
+本题输入：简化的一段xml文件，用字符串表示，如下（属性名字不包含引号和等号，也不包含大于小于等特殊字符，详细规则见下面的答题说明）
+
+string in = "<?xml version=\"1.0\" ?><Books><Book><Name = \"The C++ Programming Language\" Author=\"Bjarne Stroustrup\" /></Book><Book><Name = \"Effective C++\" Author = \"Scott Meyers\" /></Book></Books>";
+
+
+本题输出：对输入的xml字符串解析，得到输出如下：
+
+string out = "Books\r\n\tBook 1\r\n\t\tName:The C++ Programming Language\r\n\t\tAuthor:Bjarne Stroustrup\r\n\tBook 2\r\n\t\tName:Effective C++\r\n\t\tAuthor:Scott Meyers";
+
+
+
+*/
+
+
 #include <string>
 #include <vector>
 #include <iostream>
